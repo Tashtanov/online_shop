@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "539154917685",
+    "project_id": "online-shop-boots",
+    "storage_bucket": "online-shop-boots.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539154917685:android:a65274aaf61f119b46447c",
+        "android_client_info": {
+          "package_name": "com.example.asd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "539154917685-n4n1gjbfuf03h7q2482cr6q54vglpd2i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoKg0cdRd2tIhWZojAL9Bc__c2iIA0cYg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "539154917685-n4n1gjbfuf03h7q2482cr6q54vglpd2i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
