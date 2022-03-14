@@ -12,6 +12,9 @@ class AuthorizationPage extends StatefulWidget {
 class _AuthorizationPageState extends State<AuthorizationPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  late String email;
+  late String password;
+  bool showLogin=true;
 
   @override
   Widget build(BuildContext context) {
@@ -41,12 +44,49 @@ class _AuthorizationPageState extends State<AuthorizationPage> {
                   children: [Authlogo()],
                 ),
               ),
-              _form("LOGIN", () {}),
+              showLogin?
+              Column(children: [
+                _form("LOGIN", _buttonAction),
+                Padding(padding: EdgeInsets.all(10),
+                  child: GestureDetector(child:
+                  Text("Not registered yet?Register?",style:
+                  TextStyle(fontSize: 20,color: Colors.white),
+                  ),onTap: (){
+                    setState(() {
+                      showLogin=false;
+                    });
+                  },
+                  ),
+
+                )
+              ],):
+              Column(children: [
+                _form("REGISTER", _buttonAction),
+                Padding(padding: EdgeInsets.all(10),
+                  child: GestureDetector(child:
+                  Text("Already registered !Login?",style:
+                  TextStyle(fontSize: 20,color: Colors.white),
+                  ),onTap: (){
+                    setState(() {
+                      showLogin=true;
+                    });
+                  },
+                  ),
+
+                )
+              ],)
+
             ],
           ),
         ),
       ),
     );
+  }
+  void _buttonAction(){
+    email=emailController.text;
+    password=passwordController.text;
+    emailController.clear();
+    passwordController.clear();
   }
 
   Widget _form(String label, void func()) {
